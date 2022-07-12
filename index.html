@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<section class="main-wrapper">
+			<div class="main-container">
+				<h1 class="title">Generate a <span>random password</span></h1>
+				<p class="subtitle">Never use an insecure password again.</p>
+				<form class="getpassword-form" method="get" onsubmit="handleGeneratePassword(); return false;">
+					<ul class="parametres-wrapper">
+						<li class="paremetres-container">
+							<input class="parametres-input" type="checkbox" name="add-symbols" id="check-add-symbols">
+							<label for="check-add-symbols">Add symbols</label>
+						</li>
+						<li class="paremetres-container">
+							<input class="parametres-input" type="checkbox" name="add-numbers" id="check-add-numbers">
+							<label for="check-add-numbers">Add numbers</label>
+						</li>
+					</ul>
+					<div class="getnumber-container">
+						<label for="get-password-length">Password length:</label>
+						<input class="length-input" type="number" required min="8" max="15" name="get-length" id="get-password-length"
+							placeholder="15">
+					</div>
+					<button class="generate-btn" type="submit">Generate passwords</button>
+				</form>
+				<p class="line"></p>
+				<div class="generated-passwords">
+					<div class="generated-password-container" id="first-password-container">
+						<p class="generated-password"></p>
+						<i class="icon"></i>
+					</div>
+					<div class="generated-password-container" id="second-password-container">
+						<p class="generated-password"></p>
+						<i class="icon"></i>
+					</div>
+				</div>
+				</form>
+		</section>
+		<script src="index.js"></script>
+	</body>
+</html>
